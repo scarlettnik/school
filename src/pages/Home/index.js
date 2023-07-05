@@ -7,10 +7,11 @@ const Home = () => {
   const [tracks, setTracks] = useState({});
   const [playlists, setPlaylists] = useState({});
 
-  const PLAYLISTS_ENDPOINT = "https://api.spotify.com/v1/me/playlists";
-  const TRACKS_ENDPOINT = "https://api.spotify.com/v1/me/top/tracks?time_range=long_term";
-  const ARTISTS_ENDPOINT = "https://api.spotify.com/v1/me/top/artists?time_range=long_term";
+  const PLAYLISTS_ENDPOINT = "https://api.spotify.com/v1/users/me/playlists";
+  const TRACKS_ENDPOINT = "https://api.spotify.com/v1/users/me/tracks";
+  const ARTISTS_ENDPOINT = "https://api.spotify.com/v1/me/top/artists";
   const PROFILE_ENDPOINT = "https://api.spotify.com/v1/me";
+
 
   const getParamsFromHash = (hash) => {
     const content = hash.substr(1);
